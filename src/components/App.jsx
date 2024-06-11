@@ -7,18 +7,20 @@ import { useGSAP } from '@gsap/react';
 import Page2 from './Page2';
 import Page3 from './Page3';
 import Page4 from './Page4';
+import Page7 from './Page7';
+import Footer from './Footer';
 
 
 const App = () => {
   gsap.registerPlugin(ScrollTrigger);
   useGSAP(() => {
 
-    // gsap.to("body", {
-    //   backgroundColor: "#0C0145", 
+    // gsap.to(".body", {
+    //   background: "radial-gradient(circle at 40%, #fdf33f, #ffba19 50%, #ff8b39 90%, #ff7a63)",
     //   scrollTrigger: {
-    //     trigger: ".page4", 
+    //     trigger: ".page6", 
     //     start: "top -600", 
-    //     end:"top -700px",
+    //     end:"top -700",
     //     scrub:2,
     //     toggleActions: "play none none reverse" 
     //   }
@@ -139,22 +141,8 @@ const App = () => {
         </div>
       </div>
       <div className='page6'></div>
-      <div className='page7'>
-
-      <button class="download-btn">
-        <span>Download</span>
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" />
-        </svg>
-        </button>
-   
-        <div className="social_media_links">
-          <img src="/discord.png" alt="social media links"/>
-          <img src="/mail.png" alt="social media links"/>
-          <img src="/twitter.png" alt="social media links"/>
-          <img src="/instagram.png" alt="social media links"/>
-        </div>
-      </div>
+      <Page7/>
+      <Footer/>
     </div>
   );
 };
