@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import gsap from "gsap";
+import NavbarStyles from "../styles/navbar.module.css";
 import { useGSAP } from "@gsap/react";
 
 function Nav() {
@@ -17,7 +18,7 @@ function Nav() {
       delay: 1,
       stagger: 0.3,
     });
-    gsap.to(".navbar", {
+    gsap.to(`.${NavbarStyles.navbar}`, {
       opacity: 0,
       scrollTrigger: {
         trigger: ".page4",
@@ -29,9 +30,9 @@ function Nav() {
   });
 
   return (
-    <nav className="navbar">
-      <div className="navbar_content">
-        <div className="logo">
+    <nav className={NavbarStyles.navbar}>
+      <div className={NavbarStyles.navbar_content}>
+        <div className={NavbarStyles.navbar_logo}>
           <img src="/logo.png" alt="Logo" />
           <h1>JARVIS</h1>
         </div>
@@ -40,7 +41,7 @@ function Nav() {
           <h2>Features</h2>
           <h2>Download</h2>
           <h2>Connect</h2>
-          <button className="signin_button">Sign In</button>
+          <button className={NavbarStyles.navbar_signin_button}>Sign In</button>
         </div>
         <div
           className={`hamburger ${isNavOpen ? "active" : ""}`}

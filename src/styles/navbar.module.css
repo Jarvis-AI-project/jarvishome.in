@@ -1,0 +1,108 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar_content {
+  background-color: transparent;
+  height: 5vmax;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 2vw;
+}
+
+.nav_part {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2vw;
+}
+
+.nav_part h2 {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-size: 1.4vw;
+  font-style: normal;
+  transition: color 0.1s ease;
+}
+
+.navbar_logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 0.8vw;
+}
+
+.navbar_logo h1 {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 1.9vmax;
+}
+
+.navbar_logo img {
+  height: 6vw;
+  width: 6vw;
+}
+
+@keyframes colorChange {
+  from {
+    color: #fff;
+  }
+  to {
+    color: #ffd310;
+  }
+}
+
+.navbar_signin_button {
+  display: inline-block;
+  padding: 0.5vw 1vw;
+  font-size: 1.3vw;
+  font-weight: bold;
+  border: 2px solid #e4c200;
+  color: #e2c000;
+  background-color: transparent;
+  border-radius: 1vw;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+
+.navbar_signin_button:hover {
+  background-color: #d1b517;
+  color: #333;
+  transform: translateY(-2px);
+}
+
+.navbar_signin_button:focus {
+  outline: none;
+}
+
+.navbar_signin_button:active {
+  transform: translateY(1px);
+}
+
+.page4 {
+  height: 100vh;
+  width: 100%;
+  padding: 4vw;
+  text-align: center;
+}
+
+.page4 h1 {
+  font-size: 4.5vw;
+  margin-bottom: 2.5vw;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  background-image: radial-gradient(
+    circle at 5%,
+    #c9c23d,
+    #e6ac26 29%,
+    #f36d0e 71%,
+    #95230f
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+}
