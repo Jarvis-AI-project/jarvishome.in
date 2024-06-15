@@ -2,6 +2,7 @@
   position: sticky;
   top: 0;
   z-index: 1000;
+  user-select: none;
 }
 
 .navbar_content {
@@ -12,6 +13,8 @@
   justify-content: space-between;
   align-items: center;
   margin-right: 2vw;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
 }
 
 .nav_part {
@@ -53,7 +56,7 @@
     color: #fff;
   }
   to {
-    color: #ffd310;
+    color: #fbda4b;
   }
 }
 
@@ -71,7 +74,7 @@
 }
 
 .navbar_signin_button:hover {
-  background-color: #d1b517;
+  background-color: #ffe23e;
   color: #333;
   transform: translateY(-2px);
 }
@@ -105,4 +108,18 @@
   );
   -webkit-background-clip: text;
   background-clip: text;
+}
+
+.nav_link {
+  text-decoration: none;
+  color: white; /* Text color */
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-size: 1.4vw;
+  font-style: normal;
+  transition: color 0.1s ease;
+}
+
+.nav_link:hover {
+  color: #d70000; /* Hover color */
 }

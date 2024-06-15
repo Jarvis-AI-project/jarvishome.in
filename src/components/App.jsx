@@ -4,6 +4,7 @@ import RevealText from "./RevealText";
 import Navbar from "./Navbar";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import HeroSection from "./HeroSection";
 import MissionSection from "./MissionSection";
 import FeaturesSection from "./FeaturesSection";
@@ -114,49 +115,60 @@ const App = () => {
   });
 
   return (
-    <div>
-      <Navbar />
-      <div className="page1">
-        <RevealText text="TEST" />
-      </div>
-      <HeroSection />
-      <MissionSection />
-      <FeaturesSection />
-      <div className="page5">
-        <div className="animation_page">
-          <h1 className="box1">Everything at Fingertips</h1>
-          <h1 className="box2 ">That's right, Everything</h1>
-          <img
-            className="img1"
-            src="/everthing_at_fingertips.png"
-            alt="everything at fingertips"
-          />
-          <h1 className="box3">Download Our App</h1>
-          <h1 className="box4">and</h1>
-          <h1 className="box5"> Begin</h1>
-          <h1 className="normal">Your Journey to a</h1>
-          <h1 className="box6">Smarter Home</h1>
-          <img className="img2" src="/design1.png" alt="design"></img>
-          {/* <img className="img3" src="/design2.png" alt="design" ></img> */}
-        </div>
-      </div>
-      <div className="page6"></div>
-      <div className="page7">
-        <button className="download-btn">
-          <span>Download</span>
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" />
-          </svg>
-        </button>
+    <Router>
+      <div>
+        <Navbar />
 
-        <div className="social_media_links">
-          <img src="/discord.png" alt="social media links" />
-          <img src="/mail.png" alt="social media links" />
-          <img src="/twitter.png" alt="social media links" />
-          <img src="/instagram.png" alt="social media links" />
+        <Routes>
+          <Route path="/mission" element={""} />
+          <Route path="/features" element={""} />
+          <Route path="/download" element={""} />
+          <Route path="/connect" element={""} />
+          {/* Add more routes as needed */}
+        </Routes>
+
+        <div className="page1">
+          <RevealText text="TEST" />
+        </div>
+        <HeroSection />
+        <MissionSection />
+        <FeaturesSection />
+        <div className="page5">
+          <div className="animation_page">
+            <h1 className="box1">Everything at Fingertips</h1>
+            <h1 className="box2 ">That's right, Everything</h1>
+            <img
+              className="img1"
+              src="/everthing_at_fingertips.png"
+              alt="everything at fingertips"
+            />
+            <h1 className="box3">Download Our App</h1>
+            <h1 className="box4">and</h1>
+            <h1 className="box5"> Begin</h1>
+            <h1 className="normal">Your Journey to a</h1>
+            <h1 className="box6">Smarter Home</h1>
+            <img className="img2" src="/design1.png" alt="design"></img>
+            <img className="img3" src="/design2.png" alt="design"></img>
+          </div>
+        </div>
+        {/* <div className="page6"></div> */}
+        <div className="page7">
+          <button className="download-btn">
+            <span>Download</span>
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" />
+            </svg>
+          </button>
+
+          <div className="social_media_links">
+            <img src="/discord.png" alt="social media links" />
+            <img src="/mail.png" alt="social media links" />
+            <img src="/twitter.png" alt="social media links" />
+            <img src="/instagram.png" alt="social media links" />
+          </div>
         </div>
       </div>
-    </div>
+    </Router>
   );
 };
 

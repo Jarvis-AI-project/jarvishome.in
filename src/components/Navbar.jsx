@@ -2,22 +2,24 @@ import React, { useState } from "react";
 import gsap from "gsap";
 import NavbarStyles from "../styles/navbar.module.css";
 import { useGSAP } from "@gsap/react";
-
+import { Link } from "react-router-dom";
 function Nav() {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   const toggleNav = () => {
     setIsNavOpen(!isNavOpen);
   };
-
   useGSAP(() => {
     const t = gsap.timeline();
-    t.from(".logo img, .logo h1, .nav_part h2", {
-      y: -50,
-      opacity: 0,
-      delay: 1,
-      stagger: 0.3,
-    });
+    t.from(
+      `.${NavbarStyles.navbar_logo} img, .${NavbarStyles.navbar_logo} h1, .${NavbarStyles.nav_part} h2`,
+      {
+        y: -50,
+        opacity: 0,
+        delay: 1,
+        stagger: 0.3,
+      }
+    );
     gsap.to(`.${NavbarStyles.navbar}`, {
       opacity: 0,
       scrollTrigger: {
@@ -36,11 +38,24 @@ function Nav() {
           <img src="/logo.png" alt="Logo" />
           <h1>JARVIS</h1>
         </div>
-        <div className={`nav_part ${isNavOpen ? "active" : ""}`}>
-          <h2>Mission</h2>
-          <h2>Features</h2>
-          <h2>Download</h2>
-          <h2>Connect</h2>
+        <div
+          className={`${NavbarStyles.nav_part} ${
+            isNavOpen ? NavbarStyles.active : ""
+          }`}
+        >
+          <Link to="/mission" className={NavbarStyles.nav_link}>
+            <h2>Mission</h2>
+          </Link>
+          <Link to="/features" className={NavbarStyles.nav_link}>
+            <h2>Features</h2>
+          </Link>
+          <Link to="/download" className={NavbarStyles.nav_link}>
+            <h2>Download</h2>
+          </Link>
+          <Link to="/connect" className={NavbarStyles.nav_link}>
+            <h2>Connect</h2>
+          </Link>
+
           <button className={NavbarStyles.navbar_signin_button}>Sign In</button>
         </div>
         <div
