@@ -1,11 +1,12 @@
 import React from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import AnimationStyle from "../styles/animation.module.css";
 
 function Page3() {
   gsap.registerPlugin(ScrollTrigger);
   useGSAP(() => {
-    gsap.from(".mission", {
+    gsap.from(`.${AnimationStyle.animation_mission}`, {
       transform: "rotateX(45deg)",
       transition: "transform",
       transformStyle: "preserve-3d",
@@ -19,8 +20,8 @@ function Page3() {
     });
   });
   return (
-    <div className="page3">
-      <div className="mission">
+    <div className={AnimationStyle.mission_container}>
+      <div className={AnimationStyle.animation_mission}>
         <h1>Our Mission</h1>
         <p>
           At Jarvis, we believe that cutting-edge technology should be

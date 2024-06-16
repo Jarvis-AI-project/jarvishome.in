@@ -17,8 +17,6 @@
   backdrop-filter: blur(10px);
 }
 
-
-
 .nav_part {
   display: flex;
   justify-content: space-between;
@@ -126,15 +124,48 @@
   color: #d70000; /* Hover color */
 }
 
-
 .hamburger {
   display: none;
   cursor: pointer;
 }
 
-
+.bar {
+  display: block;
+  width: 2.5vh;
+  height: 0.22vh;
+  margin: 0.6vh auto;
+  background-color: white;
+  transition: all 0.3s ease-in-out;
+}
 
 @media (max-width: 768px) {
+  .navbar_content {
+    position: relative;
+  }
+
+  .nav_part {
+    position: absolute;
+    top: 10vh;
+    right: -2vw;
+    width: 20vw;
+    background-color: rgba(255, 255, 255, 0.091);
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem 1rem;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    border-radius: 2vw 0 0 2vw;
+    height: 40vh;
+  }
+
+  .nav_part.active {
+    transform: translateX(0%);
+  }
+
+  .nav_part h2 {
+    margin-bottom: 1rem;
+  }
+
   .hamburger {
     display: block;
     margin-left: auto;

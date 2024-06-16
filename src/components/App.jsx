@@ -8,11 +8,12 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import HeroSection from "./HeroSection";
 import MissionSection from "./MissionSection";
 import FeaturesSection from "./FeaturesSection";
+import HomeStyle from "../styles/home.module.css";
+import AnimationStyle from "../styles/animation.module.css";
 
 const App = () => {
   gsap.registerPlugin(ScrollTrigger);
   useGSAP(() => {
-
     gsap.to(".animation_page", {
       transform: "translateX(-290%)",
       scrollTrigger: {
@@ -23,7 +24,7 @@ const App = () => {
         scrub: 1,
       },
     });
-    gsap.from(".box1", {
+    gsap.from(`.${AnimationStyle.first_box}`, {
       y: "5rem",
       scrollTrigger: {
         trigger: ".page5",
@@ -33,7 +34,7 @@ const App = () => {
         scrub: 1,
       },
     });
-    gsap.from(".box2", {
+    gsap.from(`.${AnimationStyle.second_box}`, {
       x: "-4.6rem",
       y: "1rem",
       scrollTrigger: {
@@ -55,7 +56,7 @@ const App = () => {
         scrub: 1,
       },
     });
-    gsap.from(".box3", {
+    gsap.from(`.${AnimationStyle.third_box}`, {
       opacity: 0,
       y: "-30rem",
       scrollTrigger: {
@@ -66,7 +67,7 @@ const App = () => {
         scrub: 1,
       },
     });
-    gsap.from(".box4", {
+    gsap.from(`.${AnimationStyle.fourth_box}`, {
       scale: 0.8,
       duration: 2,
       scrollTrigger: {
@@ -77,7 +78,7 @@ const App = () => {
         scrub: 1,
       },
     });
-    gsap.from(".box5", {
+    gsap.from(`.${AnimationStyle.fifth_box}`, {
       opacity: 0,
       x: "-17rem",
       y: "-4rem",
@@ -117,7 +118,7 @@ const App = () => {
           {/* Add more routes as needed */}
         </Routes>
 
-        <div className="page1">
+        <div className={HomeStyle.text_container}>
           <RevealText text="JARVIS" />
         </div>
         <HeroSection />
@@ -125,25 +126,29 @@ const App = () => {
         <FeaturesSection />
         <div className="page5">
           <div className="animation_page">
-            <h1 className="box1">Everything at Fingertips</h1>
-            <h1 className="box2 ">That's right, Everything</h1>
+            <h1 className={AnimationStyle.first_box}>
+              Everything at Fingertips
+            </h1>
+            <h1 className={AnimationStyle.second_box}>
+              That's right, Everything
+            </h1>
             <img
               className="img1"
               src="/everthing_at_fingertips.png"
               alt="everything at fingertips"
             />
-            <h1 className="box3">Download Our App</h1>
-            <h1 className="box4">and</h1>
-            <h1 className="box5"> Begin</h1>
+            <h1 className={AnimationStyle.third_box}>Download Our App</h1>
+            <h1 className={AnimationStyle.fourth_box}>and</h1>
+            <h1 className={AnimationStyle.fifth_box}> Begin</h1>
             <h1 className="normal">Your Journey to a</h1>
-            <h1 className="box6">Smarter Home</h1>
+            <h1 className={AnimationStyle.sixth_box}>Smarter Home</h1>
             <img className="img2" src="/design1.png" alt="design"></img>
             <img className="img3" src="/design2.png" alt="design"></img>
           </div>
         </div>
         <div className="page6"></div>
         <div className="page7">
-          <button className="download-btn">
+          <button className={HomeStyle.download_btn}>
             <span>Download</span>
             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" />

@@ -59,12 +59,14 @@ function Nav() {
           <button className={NavbarStyles.navbar_signin_button}>Sign In</button>
         </div>
         <div
-          className={`hamburger ${isNavOpen ? "active" : ""}`}
+          className={`${NavbarStyles.hamburger} ${
+            isNavOpen ? NavbarStyles.active : ""
+          }`}
           onClick={toggleNav}
         >
-          <span className="bar"></span>
-          <span className="bar"></span>
-          <span className="bar"></span>
+          <span className={NavbarStyles.bar}></span>
+          <span className={NavbarStyles.bar}></span>
+          <span className={NavbarStyles.bar}></span>
         </div>
       </div>
     </nav>
