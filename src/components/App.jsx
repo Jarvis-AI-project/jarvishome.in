@@ -118,7 +118,7 @@ const App = () => {
         </Routes>
 
         <div className="page1">
-          <RevealText text="TEST" />
+          <RevealText text="JARVIS" />
         </div>
         <HeroSection />
         <MissionSection />
