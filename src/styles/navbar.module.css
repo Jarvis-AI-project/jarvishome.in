@@ -17,6 +17,8 @@
   backdrop-filter: blur(10px);
 }
 
+
+
 .nav_part {
   display: flex;
   justify-content: space-between;
@@ -122,4 +124,32 @@
 
 .nav_link:hover {
   color: #d70000; /* Hover color */
+}
+
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+    margin-left: auto;
+    padding: 0.5rem;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(0.8vh) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-0.8vh) rotate(-45deg);
+  }
 }

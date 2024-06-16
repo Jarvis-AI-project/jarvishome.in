@@ -1,0 +1,106 @@
+.animation_container {
+  height: 100vh;
+  color: white;
+  position: relative;
+}
+
+.first_box {
+  display: inline-block;
+  background: linear-gradient(to right, #a18cd1, #fbc2eb);
+  color: black;
+  padding: 0.5em;
+  border: 1px solid #0c0145;
+  border-radius: 0.5em;
+  font-size: 3rem;
+  position: absolute;
+  left: 7vw;
+  top: 34vh;
+  transform: rotate(-9deg);
+  box-shadow: 0 0.3em 0.6em rgba(0, 0, 0, 0.5);
+}
+
+.box2 {
+  display: inline-block;
+  background: linear-gradient(to bottom right, #ff6e7f, #bfe9ff);
+  color: black;
+  padding: 0.5em;
+  border: 1px solid #0c0145;
+  border-radius: 0.5em;
+  font-size: 3rem;
+  position: absolute;
+  left: 16vw;
+  top: 50vh;
+  z-index: -2;
+}
+
+.page5 .img1 {
+  width: 35vw;
+  position: absolute;
+  left: 60vw;
+  top: 33vh;
+}
+
+.box3 {
+  display: inline-block;
+  background: linear-gradient(to bottom, #98fb98, #00d2d3);
+  color: black;
+  padding: 0.5em;
+  border: 1px solid #0c0145;
+  border-radius: 0.5em;
+  width: 52vw;
+  position: absolute;
+  left: 100vw;
+  top: 51vh;
+  font-size: 4rem;
+}
+
+.box4 {
+  display: inline-block;
+  background: linear-gradient(to left, #ffd194, #f48fb1);
+  color: black;
+  padding: 0.5em;
+  border: 1px solid #0c0145;
+  border-radius: 0.5em;
+  font-size: 3.5rem;
+  position: absolute;
+  left: 150vw;
+  top: 41vh;
+}
+
+.box5 {
+  display: inline-block;
+  background: linear-gradient(to right, #ff9966, #ff5e62);
+  color: black;
+  padding: 0.5em;
+  border: 1px solid #0c0145;
+  border-radius: 0.5em;
+  font-size: 3.5rem;
+  position: absolute;
+  left: 156vw;
+  top: 60vh;
+  transform: rotate(18deg);
+  z-index: -2;
+}
+
+.normal {
+  font-size: 15rem;
+  width: 160%;
+  position: absolute;
+  left: 175vw;
+  top: 80vh;
+  transform: rotate(18deg);
+}
+
+.box6 {
+  display: inline-block;
+  background: linear-gradient(to left, #ffd194, #f48fb1);
+  color: black;
+  padding: 0.5em;
+  border: 1px solid #0c0145;
+  border-radius: 0.5em;
+  width: 45%;
+  font-size: 7rem;
+  position: absolute;
+  left: 338vw;
+  top: 127vh;
+}

@@ -12,16 +12,6 @@ import FeaturesSection from "./FeaturesSection";
 const App = () => {
   gsap.registerPlugin(ScrollTrigger);
   useGSAP(() => {
-    // gsap.to("body", {
-    //   backgroundColor: "#0C0145",
-    //   scrollTrigger: {
-    //     trigger: ".page4",
-    //     start: "top -600",
-    //     end:"top -700px",
-    //     scrub:2,
-    //     toggleActions: "play none none reverse"
-    //   }
-    // });
 
     gsap.to(".animation_page", {
       transform: "translateX(-290%)",
@@ -151,7 +141,7 @@ const App = () => {
             <img className="img3" src="/design2.png" alt="design"></img>
           </div>
         </div>
-        {/* <div className="page6"></div> */}
+        <div className="page6"></div>
         <div className="page7">
           <button className="download-btn">
             <span>Download</span>
