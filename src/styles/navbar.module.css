@@ -25,7 +25,7 @@
 }
 
 .nav_part h2 {
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
   font-weight: 300;
   font-size: 1.4vw;
   font-style: normal;
@@ -40,7 +40,7 @@
 }
 
 .navbar_logo h1 {
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
   font-weight: 300;
   font-style: normal;
   font-size: 1.9vmax;
@@ -87,11 +87,10 @@
   transform: translateY(1px);
 }
 
-
 .nav_link {
   text-decoration: none;
   color: white; /* Text color */
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
   font-weight: 300;
   font-size: 1.4vw;
   font-style: normal;

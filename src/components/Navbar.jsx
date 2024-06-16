@@ -1,36 +1,36 @@
-import React, { useState } from "react";
-import gsap from "gsap";
-import NavbarStyles from "../styles/navbar.module.css";
-import { useGSAP } from "@gsap/react";
-import { Link } from "react-router-dom";
-import FeaturesStyle from "../styles/features.module.css";
+import React, { useState } from 'react'
+import gsap from 'gsap'
+import NavbarStyles from '../styles/navbar.module.css'
+import { useGSAP } from '@gsap/react'
+import { Link } from 'react-router-dom'
+import FeaturesStyle from '../styles/features.module.css'
 function Nav() {
-  const [isNavOpen, setIsNavOpen] = useState(false);
+  const [isNavOpen, setIsNavOpen] = useState(false)
 
   const toggleNav = () => {
-    setIsNavOpen(!isNavOpen);
-  };
+    setIsNavOpen(!isNavOpen)
+  }
   useGSAP(() => {
-    const t = gsap.timeline();
+    const t = gsap.timeline()
     t.from(
       `.${NavbarStyles.navbar_logo} img, .${NavbarStyles.navbar_logo} h1, .${NavbarStyles.nav_part} h2`,
       {
         y: -50,
         opacity: 0,
         delay: 1,
-        stagger: 0.3,
+        stagger: 0.3
       }
-    );
+    )
     gsap.to(`.${NavbarStyles.navbar}`, {
       opacity: 0,
       scrollTrigger: {
         trigger: `.${FeaturesStyle.features_section}`,
-        start: "top -600",
-        end: "top -700px",
-        scrub: 2,
-      },
-    });
-  });
+        start: 'top -600',
+        end: 'top -700px',
+        scrub: 2
+      }
+    })
+  })
 
   return (
     <nav className={NavbarStyles.navbar}>
@@ -39,11 +39,7 @@ function Nav() {
           <img src="/logo.png" alt="Logo" />
           <h1>JARVIS</h1>
         </div>
-        <div
-          className={`${NavbarStyles.nav_part} ${
-            isNavOpen ? NavbarStyles.active : ""
-          }`}
-        >
+        <div className={`${NavbarStyles.nav_part} ${isNavOpen ? NavbarStyles.active : ''}`}>
           <Link to="/mission" className={NavbarStyles.nav_link}>
             <h2>Mission</h2>
           </Link>
@@ -60,9 +56,7 @@ function Nav() {
           <button className={NavbarStyles.navbar_signin_button}>Sign In</button>
         </div>
         <div
-          className={`${NavbarStyles.hamburger} ${
-            isNavOpen ? NavbarStyles.active : ""
-          }`}
+          className={`${NavbarStyles.hamburger} ${isNavOpen ? NavbarStyles.active : ''}`}
           onClick={toggleNav}
         >
           <span className={NavbarStyles.bar}></span>
@@ -71,7 +65,7 @@ function Nav() {
         </div>
       </div>
     </nav>
-  );
+  )
 }
 
-export default Nav;
+export default Nav

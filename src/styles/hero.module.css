@@ -1,14 +1,6 @@
 .hero_section {
   height: 100vh;
-  background: linear-gradient(
-    to bottom right,
-    #666c0c,
-    #827c1c,
-    black,
-    black,
-    #282b2f,
-    black
-  );
+  background: linear-gradient(to bottom right, #666c0c, #827c1c, black, black, #282b2f, black);
   display: flex;
   justify-content: space-between;
   align-items: center;

@@ -133,13 +133,7 @@
 .animation_mission h1 {
   color: transparent;
   -webkit-text-fill-color: transparent;
-  background-image: radial-gradient(
-    circle at 5%,
-    #c9c23d,
-    #e6ac26 29%,
-    #f36d0e 71%,
-    #95230f
-  );
+  background-image: radial-gradient(circle at 5%, #c9c23d, #e6ac26 29%, #f36d0e 71%, #95230f);
   -webkit-background-clip: text;
   background-clip: text;
   font-size: 5vmax;
@@ -147,7 +141,7 @@
 
 .animation_mission p {
   margin-top: 3.7vh;
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
   font-weight: 300;
   font-size: 1.4vmax;
   font-style: normal;

@@ -10,13 +10,7 @@
   margin-bottom: 2.5vw;
   color: transparent;
   -webkit-text-fill-color: transparent;
-  background-image: radial-gradient(
-    circle at 5%,
-    #c9c23d,
-    #e6ac26 29%,
-    #f36d0e 71%,
-    #95230f
-  );
+  background-image: radial-gradient(circle at 5%, #c9c23d, #e6ac26 29%, #f36d0e 71%, #95230f);
   -webkit-background-clip: text;
   background-clip: text;
 }
