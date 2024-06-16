@@ -2,6 +2,7 @@
   height: 100vh;
   color: white;
   position: relative;
+  user-select: none;
 }
 
 .first_box {
@@ -191,5 +192,12 @@
     margin: 1rem 0;
     width: 100%;
     text-align: center;
+  }
+
+  .animation_container .img1 {
+    width: 80%;
+    position: static;
+    display: block;
+    margin: 1rem auto;
   }
 }

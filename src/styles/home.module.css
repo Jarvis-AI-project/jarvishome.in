@@ -5,6 +5,7 @@
 }
 
 .download_btn {
+  background-color: red;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -20,7 +21,7 @@
   transition: all 0.3s ease;
   position: relative;
   left: 35%;
-  top: 40%;
+  top: 95%;
   overflow: hidden;
 }
 
@@ -28,7 +29,6 @@
   position: relative;
   z-index: 2;
   transition: transform 0.3s ease;
-
 }
 
 .download_btn svg {
@@ -72,17 +72,44 @@
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.2);
 }
 
-@media (max-width: 768px) {
-    .download_btn {
-        font-size: 2rem;
-        left: 50%;
-        transform: translateX(-50%);
-        top: 75%;
+.links_Contain {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
 
-      }
-    
-      .download_btn svg {
-        width: 2rem;
-        height: 2rem;
-      }
+.social_media_links {
+  position: absolute;
+  height: 10%;
+  width: 100%;
+  top: 75%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .download_btn {
+    font-size: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 55%;
+  }
+
+  .social_media_links {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    padding: 2rem 0;
+  }
+
+  .download_btn svg {
+    width: 2rem;
+    height: 2rem;
+  }
+  .page7 img {
+    height: 4rem;
+    margin: 1rem 0;
+  }
 }

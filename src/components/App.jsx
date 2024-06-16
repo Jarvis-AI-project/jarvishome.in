@@ -17,7 +17,7 @@ const App = () => {
     gsap.to(".animation_page", {
       transform: "translateX(-290%)",
       scrollTrigger: {
-        trigger: ".page5",
+        trigger: `.${AnimationStyle.animation_container}`,
         scroller: "body",
         start: "top 0%",
         end: "top -100%",
@@ -27,7 +27,7 @@ const App = () => {
     gsap.from(`.${AnimationStyle.first_box}`, {
       y: "5rem",
       scrollTrigger: {
-        trigger: ".page5",
+        trigger: `.${AnimationStyle.animation_container}`,
         scroller: "body",
         start: "top 12%",
         end: "top -1%",
@@ -38,7 +38,7 @@ const App = () => {
       x: "-4.6rem",
       y: "1rem",
       scrollTrigger: {
-        trigger: ".page5",
+        trigger: `.${AnimationStyle.animation_container}`,
         scroller: "body",
         start: "top 12%",
         end: "top -1%",
@@ -49,7 +49,7 @@ const App = () => {
       scale: 0.6,
       opacity: 0,
       scrollTrigger: {
-        trigger: ".page5",
+        trigger: `.${AnimationStyle.animation_container}`,
         scroller: "body",
         start: "top 12%",
         end: "top -1%",
@@ -60,7 +60,7 @@ const App = () => {
       opacity: 0,
       y: "-30rem",
       scrollTrigger: {
-        trigger: ".page5",
+        trigger: `.${AnimationStyle.animation_container}`,
         scroller: "body",
         start: "top -9%",
         end: "top -12%",
@@ -71,7 +71,7 @@ const App = () => {
       scale: 0.8,
       duration: 2,
       scrollTrigger: {
-        trigger: ".page5",
+        trigger: `.${AnimationStyle.animation_container}`,
         scroller: "body",
         start: "top -11%",
         end: "top -14%",
@@ -84,7 +84,7 @@ const App = () => {
       y: "-4rem",
       transform: "rotate(0deg)",
       scrollTrigger: {
-        trigger: ".page5",
+        trigger: `.${AnimationStyle.animation_container}`,
         scroller: "body",
         start: "top -14%",
         end: "top -15%",
@@ -96,7 +96,7 @@ const App = () => {
       x: "120rem",
       y: "34rem",
       scrollTrigger: {
-        trigger: ".page5",
+        trigger: `.${AnimationStyle.animation_container}`,
         scroller: "body",
         start: "top -20%",
         end: "top -100%",
@@ -111,11 +111,11 @@ const App = () => {
         <Navbar />
 
         <Routes>
+          <Route path="/" element={""} />
           <Route path="/mission" element={""} />
           <Route path="/features" element={""} />
           <Route path="/download" element={""} />
           <Route path="/connect" element={""} />
-          {/* Add more routes as needed */}
         </Routes>
 
         <div className={HomeStyle.text_container}>
@@ -124,7 +124,7 @@ const App = () => {
         <HeroSection />
         <MissionSection />
         <FeaturesSection />
-        <div className="page5">
+        <div className={AnimationStyle.animation_container}>
           <div className="animation_page">
             <h1 className={AnimationStyle.first_box}>
               Everything at Fingertips
@@ -146,21 +146,20 @@ const App = () => {
             <img className="img3" src="/design2.png" alt="design"></img>
           </div>
         </div>
-        <div className="page6"></div>
+
         <div className="page7">
+          <div className={HomeStyle.social_media_links}>
+            <img src="/discord.png" alt="social media links" />
+            <img src="/mail.png" alt="social media links" />
+            <img src="/twitter.png" alt="social media links" />
+            <img src="/instagram.png" alt="social media links" />
+          </div>
           <button className={HomeStyle.download_btn}>
             <span>Download</span>
             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" />
             </svg>
           </button>
-
-          <div className="social_media_links">
-            <img src="/discord.png" alt="social media links" />
-            <img src="/mail.png" alt="social media links" />
-            <img src="/twitter.png" alt="social media links" />
-            <img src="/instagram.png" alt="social media links" />
-          </div>
         </div>
       </div>
     </Router>

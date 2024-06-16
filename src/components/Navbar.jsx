@@ -3,6 +3,7 @@ import gsap from "gsap";
 import NavbarStyles from "../styles/navbar.module.css";
 import { useGSAP } from "@gsap/react";
 import { Link } from "react-router-dom";
+import FeaturesStyle from "../styles/features.module.css";
 function Nav() {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
@@ -23,7 +24,7 @@ function Nav() {
     gsap.to(`.${NavbarStyles.navbar}`, {
       opacity: 0,
       scrollTrigger: {
-        trigger: ".page4",
+        trigger: `.${FeaturesStyle.features_section}`,
         start: "top -600",
         end: "top -700px",
         scrub: 2,
