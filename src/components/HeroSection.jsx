@@ -2,20 +2,21 @@ import React from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import AnimationStyle from "../styles/animation.module.css";
+import HeroStyle from "../styles/hero.module.css";
 
 function Page2() {
   gsap.registerPlugin(ScrollTrigger);
   useGSAP(() => {
     const t = gsap.timeline({
       scrollTrigger: {
-        trigger: ".page2",
+        trigger: `.${HeroStyle.hero_section}`,
         scroll: "body",
         start: "top 70%",
         end: "bottom 100%",
         scrub: 2,
       },
     });
-    t.from(".page2 img", {
+    t.from(`.${HeroStyle.hero_section} img`, {
       opacity: 0,
       x: -100,
     });
@@ -33,9 +34,9 @@ function Page2() {
     });
   });
   return (
-    <div className="page2">
+    <div className={HeroStyle.hero_section}>
       <img src="robot.png" alt="robot"></img>
-      <div className="page2_content">
+      <div className={HeroStyle.hero_section_content}>
         <h1 className={AnimationStyle.the}>The</h1>
         <h1 className={AnimationStyle.future}>Future</h1>
         <h1 className={AnimationStyle.is_here}>Is Here</h1>

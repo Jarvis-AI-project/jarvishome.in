@@ -142,12 +142,20 @@ const App = () => {
             <h1 className={AnimationStyle.fifth_box}> Begin</h1>
             <h1 className="normal">Your Journey to a</h1>
             <h1 className={AnimationStyle.sixth_box}>Smarter Home</h1>
-            <img className="img2" src="/design1.png" alt="design"></img>
-            <img className="img3" src="/design2.png" alt="design"></img>
+            <img
+              className={AnimationStyle.img2}
+              src="/design1.png"
+              alt="design"
+            ></img>
+            <img
+              className={AnimationStyle.img3}
+              src="/design2.png"
+              alt="design"
+            ></img>
           </div>
         </div>
 
-        <div className="page7">
+        <div className={HomeStyle.links_container}>
           <div className={HomeStyle.social_media_links}>
             <img src="/discord.png" alt="social media links" />
             <img src="/mail.png" alt="social media links" />

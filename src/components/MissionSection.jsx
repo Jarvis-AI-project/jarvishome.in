@@ -2,8 +2,9 @@ import React from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import AnimationStyle from "../styles/animation.module.css";
+import HeroStyle from "../styles/hero.module.css";
 
-function Page3() {
+function MissionSection() {
   gsap.registerPlugin(ScrollTrigger);
   useGSAP(() => {
     gsap.from(`.${AnimationStyle.animation_mission}`, {
@@ -11,7 +12,7 @@ function Page3() {
       transition: "transform",
       transformStyle: "preserve-3d",
       scrollTrigger: {
-        trigger: ".page2",
+        trigger: `.${HeroStyle.hero_section}`,
         start: "top -200",
         end: "top -800px",
         scrub: 2,
@@ -54,4 +55,4 @@ function Page3() {
   );
 }
 
-export default Page3;
+export default MissionSection;
