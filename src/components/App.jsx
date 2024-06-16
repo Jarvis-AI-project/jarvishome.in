@@ -91,7 +91,7 @@ const App = () => {
         scrub: 1
       }
     })
-    gsap.to('.img2', {
+    gsap.to(`.${AnimationStyle.img2}`, {
       rotation: 720,
       x: '120rem',
       y: '34rem',

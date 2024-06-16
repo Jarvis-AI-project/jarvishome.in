@@ -29,6 +29,10 @@ body {
   transform: rotate(18deg);
 }
 
+
+
+
+
 @media (max-width: 768px) {
   .normal {
     position: static;
@@ -38,4 +42,6 @@ body {
     width: 100%;
     text-align: center;
   }
+
+
 }

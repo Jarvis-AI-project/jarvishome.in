@@ -1,29 +1,20 @@
-# TODO: This is a python makefile. @swarnim modify this for react app.
-# I am using npm serve package for starting website.
-# If possible setup a global code formatter.
-
-SERVICE_NAME = jarvis-auth-server
-SERVICE_FILE = $(CURDIR)/gunicorn.service
+SHELL := /bin/bash
+SERVICE_NAME = jarvis-web-app
+SERVICE_FILE = $(CURDIR)/react-app.service
 TARGET_SERVICE_FILE = /etc/systemd/system/$(SERVICE_NAME).service
 WORK_DIR = /home/devasheesh/auth-server
 VENV_DIR = $(WORK_DIR)/.venv
 
-.PHONY: all install enable start status logs stop disable clean deps start_dev_server deploy dev
+include .env
+.PHONY: all install enable start status logs stop disable clean deps deploy dev format
+
 
 all: dev
 
 deps:
 	@echo "Installing dependencies ..."
-	poetry install
+	npm install
 
-database:
-	@echo "Upgrading database..."
-	poetry run alembic upgrade head
-
-start_dev_server:
-	@echo "Starting development server ..."
-# 	TODO: Take host and port from env variables also in gunicorn service file
-	poetry run uvicorn app:app --host=127.0.0.1 --port=8000 --reload
 
 install:
 	@echo "Installing $(SERVICE_NAME) service ..."
@@ -61,8 +52,8 @@ clean: stop disable
 
 format:
 	@echo "Formatting code ..."
-	poetry run black --line-length 100 --skip-string-normalization --skip-magic-trailing-comma --target-version py39 app
+	npm run format
 
-deploy: deps database install start
+deploy: deps install start
 
-dev: deps databases tart_dev_server
+dev: deps start_dev_server
