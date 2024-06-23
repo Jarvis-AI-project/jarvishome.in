@@ -1,27 +1,38 @@
 // src/App.jsx
-import React from 'react'
-import RevealText from './RevealText'
-import Navbar from './Navbar'
-import gsap from 'gsap'
-import { useGSAP } from '@gsap/react'
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
-import HeroSection from './HeroSection'
-import MissionSection from './MissionSection'
-import FeaturesSection from './FeaturesSection'
-import HomeStyle from '../styles/home.module.css'
-import AnimationStyle from '../styles/animation.module.css'
+import React from 'react';
+import RevealText from './RevealText';
+import Navbar from './Navbar';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+import HeroSection from './HeroSection';
+import MissionSection from './MissionSection';
+import FeaturesSection from './FeaturesSection';
+import DownloadSection from './DownloadSection';
+import Footer from './Footer';
 
 const App = () => {
   gsap.registerPlugin(ScrollTrigger)
   useGSAP(() => {
-    gsap.to('.animation_page', {
-      transform: 'translateX(-290%)',
-      scrollTrigger: {
-        trigger: `.${AnimationStyle.animation_container}`,
-        scroller: 'body',
-        start: 'top 0%',
-        end: 'top -100%',
-        scrub: 1
+
+    // gsap.to(".body", {
+    //   background: "radial-gradient(circle at 40%, #fdf33f, #ffba19 50%, #ff8b39 90%, #ff7a63)",
+    //   scrollTrigger: {
+    //     trigger: ".page6", 
+    //     start: "top -600", 
+    //     end:"top -700",
+    //     scrub:2,
+    //     toggleActions: "play none none reverse" 
+    //   }
+    // });
+    
+    gsap.to(".animation_page",{
+      transform: "translateX(-290%)",
+      scrollTrigger:{
+        trigger:".page5",
+        scroller:"body",
+        start: "top 0%",
+        end:"top -100%",
+        scrub:1,
       }
     })
     gsap.from(`.${AnimationStyle.first_box}`, {
@@ -106,60 +117,34 @@ const App = () => {
   })
 
   return (
-    <Router>
-      <div>
-        <Navbar />
-
-        <Routes>
-          <Route path="/" element={''} />
-          <Route path="/mission" element={''} />
-          <Route path="/features" element={''} />
-          <Route path="/download" element={''} />
-          <Route path="/connect" element={''} />
-        </Routes>
-
-        <div className={HomeStyle.text_container}>
-          <RevealText text="JARVIS" />
-        </div>
-        <HeroSection />
-        <MissionSection />
-        <FeaturesSection />
-        <div className={AnimationStyle.animation_container}>
-          <div className="animation_page">
-            <h1 className={AnimationStyle.first_box}>Everything at Fingertips</h1>
-            <h1 className={AnimationStyle.second_box}>That's right, Everything</h1>
-            <img
-              className="img1"
-              src="/everthing_at_fingertips.png"
-              alt="everything at fingertips"
-            />
-            <h1 className={AnimationStyle.third_box}>Download Our App</h1>
-            <h1 className={AnimationStyle.fourth_box}>and</h1>
-            <h1 className={AnimationStyle.fifth_box}> Begin</h1>
-            <h1 className="normal">Your Journey to a</h1>
-            <h1 className={AnimationStyle.sixth_box}>Smarter Home</h1>
-            <img className={AnimationStyle.img2} src="/design1.png" alt="design"></img>
-            <img className={AnimationStyle.img3} src="/design2.png" alt="design"></img>
-          </div>
-        </div>
-
-        <div className={HomeStyle.links_container}>
-          <div className={HomeStyle.social_media_links}>
-            <img src="/discord.png" alt="social media links" />
-            <img src="/mail.png" alt="social media links" />
-            <img src="/twitter.png" alt="social media links" />
-            <img src="/instagram.png" alt="social media links" />
-          </div>
-          <button className={HomeStyle.download_btn}>
-            <span>Download</span>
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" />
-            </svg>
-          </button>
+    <div>
+      <Navbar />
+      <div className="page1">
+        <RevealText text="JARVIS" />
+      </div>
+      <HeroSection/>
+      <MissionSection/>
+      <FeaturesSection/>
+      <div className="page5">
+        <div className="animation_page">
+          <h1 className="box1">Everything at Fingertips</h1>
+          <h1 className="box2 " >That's right, Everything</h1>
+          <img className="img1" src="/everthing_at_fingertips.png" alt="everything at fingertips"/>
+          <h1 className="box3">Download Our App</h1>
+          <h1 className="box4">and</h1>
+          <h1 className="box5"> Begin</h1>
+          <h1 className="normal">Your Journey to a</h1>
+          <h1 className='box6'>Smarter Home</h1>
+          <img className="img2" src="/design1.png" alt="design" ></img>
+          {/* <img className="img3" src="/design2.png" alt="design" ></img> */}
         </div>
       </div>
-    </Router>
-  )
-}
+      <div className='page6'></div>
+      <DownloadSection/>
+      <Footer/>
+    </div>
+  );
+};
+
 
 export default App
