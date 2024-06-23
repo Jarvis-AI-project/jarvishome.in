@@ -2,7 +2,7 @@ import React from "react";
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 
-function Page2(){
+function HeroSection(){
     gsap.registerPlugin(ScrollTrigger);
     useGSAP(() => {
         const t = gsap.timeline({
@@ -43,4 +43,4 @@ function Page2(){
     );
 }
 
-export default Page2;
+export default HeroSection;

@@ -1,6 +1,21 @@
 import React from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 
-function Page4() {
+function Features() {
+  
+  // useGSAP(() => {
+  //   const t = gsap.timeline();
+  //   t.from(".card:nth-of-type(1)",{
+  //     opacity:0,
+  //     duration:0.5
+  //   });
+  //   t.to(".card:nth-of-type(2)",{
+  //     y:135,
+  //     opacity:0,
+  //     duration:1
+  //   });
+  // });
   return (
     <div className="page4">
       <h1>Features</h1>
@@ -48,4 +63,5 @@ function Page4() {
   );
 }
 
-export default Page4;
+
+export default Features;

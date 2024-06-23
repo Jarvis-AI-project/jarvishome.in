@@ -1,6 +1,6 @@
 import React from "react";
 
-function Page7() {
+function DownloadSection() {
   return (
     <div className='page7'>
       <div className="download-btn">
@@ -16,4 +16,4 @@ function Page7() {
   );
 }
 
-export default Page7;
+export default DownloadSection;

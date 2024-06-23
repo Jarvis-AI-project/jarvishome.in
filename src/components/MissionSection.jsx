@@ -2,7 +2,7 @@ import React from "react";
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 
-function Page3(){
+function MissionSection(){
     gsap.registerPlugin(ScrollTrigger);
     useGSAP(() => {
         gsap.from(".mission",{
@@ -32,4 +32,4 @@ function Page3(){
     );
 }
 
-export default Page3;
+export default MissionSection;

@@ -1,13 +1,13 @@
 // src/App.jsx
 import React from 'react';
 import RevealText from './RevealText';
-import Nav from './Nav';
+import Navbar from './Navbar';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
-import Page2 from './Page2';
-import Page3 from './Page3';
-import Page4 from './Page4';
-import Page7 from './Page7';
+import HeroSection from './HeroSection';
+import MissionSection from './MissionSection';
+import FeaturesSection from './FeaturesSection';
+import DownloadSection from './DownloadSection';
 import Footer from './Footer';
 
 
@@ -119,13 +119,13 @@ const App = () => {
 
   return (
     <div>
-      <Nav />
+      <Navbar />
       <div className="page1">
         <RevealText text="JARVIS" />
       </div>
-      <Page2/>
-      <Page3/>
-      <Page4/>
+      <HeroSection/>
+      <MissionSection/>
+      <FeaturesSection/>
       <div className="page5">
         <div className="animation_page">
           <h1 className="box1">Everything at Fingertips</h1>
@@ -141,7 +141,7 @@ const App = () => {
         </div>
       </div>
       <div className='page6'></div>
-      <Page7/>
+      <DownloadSection/>
       <Footer/>
     </div>
   );
