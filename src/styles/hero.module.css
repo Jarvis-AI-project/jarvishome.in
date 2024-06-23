@@ -1,0 +1,27 @@
+.hero_section {
+  height: 100vh;
+  background: linear-gradient(to bottom right, #666c0c, #827c1c, black, black, #282b2f, black);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.hero_section img {
+  height: 80vh;
+  width: 40%;
+  padding: 2rem;
+  object-fit: contain;
+}
+
+.hero_section_content {
+  height: 80vh;
+  width: 60%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column; /* Arrange words in a column */
+  justify-content: center; /* Center vertically */
+  align-items: flex-start; /* Align text to the left */
+  position: relative;
+  left: -5%;
+}

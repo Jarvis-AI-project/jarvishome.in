@@ -1,0 +1,14 @@
+[Unit]
+Description=My React App
+After=network.target
+
+[Service]
+WorkingDirectory=/home/devasheesh/jarvishome.in/
+ExecStart=/home/devasheesh/jarvishome.in/deploy.sh
+Restart=always
+User=devasheesh
+Group=devasheesh
+Environment="NODE_ENV=production"
+
+[Install]
+WantedBy=multi-user.target

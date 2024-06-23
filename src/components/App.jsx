@@ -10,9 +10,8 @@ import FeaturesSection from './FeaturesSection';
 import DownloadSection from './DownloadSection';
 import Footer from './Footer';
 
-
 const App = () => {
-  gsap.registerPlugin(ScrollTrigger);
+  gsap.registerPlugin(ScrollTrigger)
   useGSAP(() => {
 
     // gsap.to(".body", {
@@ -35,87 +34,87 @@ const App = () => {
         end:"top -100%",
         scrub:1,
       }
-    });
-    gsap.from(".box1",{
-      y:"5rem",
-      scrollTrigger:{
-        trigger:".page5",
-        scroller:"body",
-        start: "top 12%",
-        end:"top -1%",
-        scrub:1,
+    })
+    gsap.from(`.${AnimationStyle.first_box}`, {
+      y: '5rem',
+      scrollTrigger: {
+        trigger: `.${AnimationStyle.animation_container}`,
+        scroller: 'body',
+        start: 'top 12%',
+        end: 'top -1%',
+        scrub: 1
       }
-    });
-    gsap.from(".box2",{
-      x:"-4.6rem",
-      y:"1rem",
-      scrollTrigger:{
-        trigger:".page5",
-        scroller:"body",
-        start: "top 12%",
-        end:"top -1%",
-        scrub:1,
+    })
+    gsap.from(`.${AnimationStyle.second_box}`, {
+      x: '-4.6rem',
+      y: '1rem',
+      scrollTrigger: {
+        trigger: `.${AnimationStyle.animation_container}`,
+        scroller: 'body',
+        start: 'top 12%',
+        end: 'top -1%',
+        scrub: 1
       }
-    });
-    gsap.from(".img1",{
-      scale:0.6,
-      opacity:0,
-      scrollTrigger:{
-        trigger:".page5",
-        scroller:"body",
-        start: "top 12%",
-        end:"top -1%",
-        scrub:1,
+    })
+    gsap.from('.img1', {
+      scale: 0.6,
+      opacity: 0,
+      scrollTrigger: {
+        trigger: `.${AnimationStyle.animation_container}`,
+        scroller: 'body',
+        start: 'top 12%',
+        end: 'top -1%',
+        scrub: 1
       }
-    });
-    gsap.from(".box3",{
-      opacity:0,
-      y:"-30rem",
-      scrollTrigger:{
-        trigger:".page5",
-        scroller:"body",
-        start: "top -9%",
-        end:"top -12%",
-        scrub:1
+    })
+    gsap.from(`.${AnimationStyle.third_box}`, {
+      opacity: 0,
+      y: '-30rem',
+      scrollTrigger: {
+        trigger: `.${AnimationStyle.animation_container}`,
+        scroller: 'body',
+        start: 'top -9%',
+        end: 'top -12%',
+        scrub: 1
       }
-    });
-    gsap.from(".box4",{
-      scale:0.8,
-      dration:2,
-      scrollTrigger:{
-        trigger:".page5",
-        scroller:"body",
-        start: "top -11%",
-        end:"top -14%",
-        scrub:1
+    })
+    gsap.from(`.${AnimationStyle.fourth_box}`, {
+      scale: 0.8,
+      duration: 2,
+      scrollTrigger: {
+        trigger: `.${AnimationStyle.animation_container}`,
+        scroller: 'body',
+        start: 'top -11%',
+        end: 'top -14%',
+        scrub: 1
       }
-    });
-    gsap.from(".box5",{
-      opacity:0,
-      x:"-17rem",
-      y:"-4rem",
-      transform: "rotate(0deg)",
-      scrollTrigger:{
-        trigger:".page5",
-        scroller:"body",
-        start: "top -14%",
-        end:"top -15%",
-        scrub:1
+    })
+    gsap.from(`.${AnimationStyle.fifth_box}`, {
+      opacity: 0,
+      x: '-17rem',
+      y: '-4rem',
+      transform: 'rotate(0deg)',
+      scrollTrigger: {
+        trigger: `.${AnimationStyle.animation_container}`,
+        scroller: 'body',
+        start: 'top -14%',
+        end: 'top -15%',
+        scrub: 1
       }
-    });
-    gsap.to(".img2",{
+    })
+    gsap.to(`.${AnimationStyle.img2}`, {
       rotation: 720,
-      x:"120rem",
-      y:"34rem",
-      scrollTrigger:{
-        trigger:".page5",
-        scroller:"body",
-        start: "top -20%",
-        end:"top -100%",
-        scrub:1
+      x: '120rem',
+      y: '34rem',
+      scrollTrigger: {
+        trigger: `.${AnimationStyle.animation_container}`,
+        scroller: 'body',
+        start: 'top -20%',
+        end: 'top -100%',
+        scrub: 1
       }
-    });
-  });
+    })
+  })
 
   return (
     <div>
@@ -147,4 +146,5 @@ const App = () => {
   );
 };
 
-export default App;
+
+export default App

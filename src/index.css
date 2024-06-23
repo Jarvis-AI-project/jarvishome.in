@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family:Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 html,
@@ -12,14 +12,6 @@ body {
   background-color: black;
   overflow-x: hidden;
 }
-
-
-.page1{
-  height: 100vh;
-  width:100vw;
-  margin-top:10vh;
-}
-
 
 .container {
   display: flex;
@@ -569,59 +561,21 @@ body {
 }
 
 .normal{
+
   font-size: 15rem;
-  width:160%;
-  position:absolute;
-  left:175vw;
-  top:80vh;
+  width: 160%;
+  position: absolute;
+  left: 175vw;
+  top: 80vh;
   transform: rotate(18deg);
 }
 
 
-.box6{
-  display: inline-block; 
-  background: linear-gradient(to left, #ffd194, #f48fb1);
-  color: black;
-  padding: 0.5em; 
-  border: 1px solid #0C0145; 
-  border-radius: 0.5em;
-  width:45%;
-  font-size: 7rem;
-  position:absolute;
-  left:338vw;
-  top:127vh;
-}
 
-.img2{
-  position:absolute;
-  top:20vh;
-  z-index:-4;
-  left:170vw;
-  height:20rem;
-  transform: rotate(20deg);
-}
-.img3{
-  position:absolute;
-  height:20em;
-  left:130vw;
-  top:70vh;
-  /* transform: rotate(20deg); */
-}
 
-/* .animation_page{
-  width:515%;
-} */
 
 @media (max-width: 768px) {
-  .box1,
-  .box2,
-  .box3,
-  .box4,
-  .box5,
-  .normal,
-  .box6,
-  .img2,
-  .img3 {
+  .normal {
     position: static;
     transform: none;
     font-size: 1.5rem;
@@ -629,14 +583,6 @@ body {
     width: 100%;
     text-align: center;
   }
-
-  .page5 .img1 {
-    width: 80%;
-    position: static;
-    display: block;
-    margin: 1rem auto;
-  }
-}
 
 .page6{
   width:100%;
@@ -732,4 +678,5 @@ footer{
   transform: scale(0.95);
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.2);
 }
+
 

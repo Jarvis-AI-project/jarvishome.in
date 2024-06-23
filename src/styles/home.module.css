@@ -1,0 +1,132 @@
+.text_container {
+  height: 100vh;
+  width: 100vw;
+  margin-top: 10vh;
+}
+
+.download_btn {
+  background-color: red;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(45deg, #ff7b00, #ff4d00);
+  color: #ffffff;
+  border: none;
+  border-radius: 1rem;
+  padding: 0.75rem 1.25rem;
+  font-size: 4rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  position: relative;
+  left: 35%;
+  top: 95%;
+  overflow: hidden;
+}
+
+.download_btn span {
+  position: relative;
+  z-index: 2;
+  transition: transform 0.3s ease;
+}
+
+.download_btn svg {
+  width: 4rem;
+  height: 4rem;
+  fill: currentColor;
+  margin-left: 0.5rem;
+  transform: translateX(0);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 1;
+}
+
+.download_btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #ff4d00, #ff7b00);
+  opacity: 0;
+  transform: translateY(100%);
+  transition: all 0.3s ease;
+}
+
+.download_btn:hover::before {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.download_btn:hover svg {
+  opacity: 0;
+}
+
+.download_btn:hover span {
+  transform: translateX(2rem);
+}
+
+.download_btn:active {
+  transform: scale(0.95);
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.2);
+}
+
+.links_container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.links_container img {
+  height: 8vh;
+}
+.social_media_links {
+  position: absolute;
+  height: 10%;
+  width: 100%;
+  top: 75%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.img2 {
+  position: absolute;
+  top: 20vh;
+  z-index: -4;
+  left: 170vw;
+  height: 20rem;
+  transform: rotate(20deg);
+}
+.img3 {
+  position: absolute;
+  height: 20em;
+  left: 130vw;
+  top: 70vh;
+}
+
+@media (max-width: 768px) {
+  .download_btn {
+    font-size: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 55%;
+  }
+
+  .social_media_links {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    padding: 2rem 0;
+  }
+
+  .download_btn svg {
+    width: 2rem;
+    height: 2rem;
+  }
+  .links_container img {
+    height: 4rem;
+    margin: 1rem 0;
+  }
+}

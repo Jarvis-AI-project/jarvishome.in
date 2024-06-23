@@ -1,0 +1,197 @@
+.animation_container {
+  height: 100vh;
+  color: white;
+  position: relative;
+  user-select: none;
+}
+
+.first_box {
+  display: inline-block;
+  background: linear-gradient(to right, #a18cd1, #fbc2eb);
+  color: black;
+  padding: 0.5em;
+  border: 1px solid #0c0145;
+  border-radius: 0.5em;
+  font-size: 3rem;
+  position: absolute;
+  left: 7vw;
+  top: 34vh;
+  transform: rotate(-9deg);
+  box-shadow: 0 0.3em 0.6em rgba(0, 0, 0, 0.5);
+}
+
+.second_box {
+  display: inline-block;
+  background: linear-gradient(to bottom right, #ff6e7f, #bfe9ff);
+  color: black;
+  padding: 0.5em;
+  border: 1px solid #0c0145;
+  border-radius: 0.5em;
+  font-size: 3rem;
+  position: absolute;
+  left: 16vw;
+  top: 50vh;
+  z-index: -2;
+}
+
+.animation_container .img1 {
+  width: 35vw;
+  position: absolute;
+  left: 60vw;
+  top: 33vh;
+}
+
+.third_box {
+  display: inline-block;
+  background: linear-gradient(to bottom, #98fb98, #00d2d3);
+  color: black;
+  padding: 0.5em;
+  border: 1px solid #0c0145;
+  border-radius: 0.5em;
+  width: 52vw;
+  position: absolute;
+  left: 100vw;
+  top: 51vh;
+  font-size: 4rem;
+}
+
+.fourth_box {
+  display: inline-block;
+  background: linear-gradient(to left, #ffd194, #f48fb1);
+  color: black;
+  padding: 0.5em;
+  border: 1px solid #0c0145;
+  border-radius: 0.5em;
+  font-size: 3.5rem;
+  position: absolute;
+  left: 150vw;
+  top: 41vh;
+}
+
+.fifth_box {
+  display: inline-block;
+  background: linear-gradient(to right, #ff9966, #ff5e62);
+  color: black;
+  padding: 0.5em;
+  border: 1px solid #0c0145;
+  border-radius: 0.5em;
+  font-size: 3.5rem;
+  position: absolute;
+  left: 156vw;
+  top: 60vh;
+  transform: rotate(18deg);
+  z-index: -2;
+}
+
+.sixth_box {
+  display: inline-block;
+  background: linear-gradient(to left, #ffd194, #f48fb1);
+  color: black;
+  padding: 0.5em;
+  border: 1px solid #0c0145;
+  border-radius: 0.5em;
+  width: 45%;
+  font-size: 7rem;
+  position: absolute;
+  left: 338vw;
+  top: 127vh;
+}
+
+.the,
+.future,
+.is_here {
+  font-size: 13vw; /* Adjust font size for better responsiveness */
+  line-height: 8.7vw;
+}
+
+.the {
+  color: yellow;
+}
+
+.future {
+  color: rgb(145, 145, 145);
+  position: relative;
+  left: 12%;
+}
+
+.is_here {
+  color: white;
+  position: relative;
+  left: 24%;
+}
+
+.animation_mission {
+  height: 80%;
+  background-color: black;
+  border-radius: 8vw;
+  color: white;
+  padding: 3.8vmax;
+  margin: 6vw;
+  margin-top: 10vh;
+}
+
+.animation_mission h1 {
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  background-image: radial-gradient(circle at 5%, #c9c23d, #e6ac26 29%, #f36d0e 71%, #95230f);
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-size: 5vmax;
+}
+
+.animation_mission p {
+  margin-top: 3.7vh;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-size: 1.4vmax;
+  font-style: normal;
+  letter-spacing: 0.09vh;
+}
+
+.mission_container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: top;
+  background: linear-gradient(
+    to top left,
+    black,
+    #282b2f,
+    black,
+    black,
+    black,
+    rgb(0, 0, 0),
+    black,
+    #282b2f,
+    black,
+    black,
+    black
+  );
+  perspective: 1000px;
+}
+
+@media (max-width: 768px) {
+  .first_box,
+  .second_box,
+  .third_box,
+  .fourth_box,
+  .fifth_box,
+  .sixth_box,
+  .img2,
+  .img3 {
+    position: static;
+    transform: none;
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .animation_container .img1 {
+    width: 80%;
+    position: static;
+    display: block;
+    margin: 1rem auto;
+  }
+}
