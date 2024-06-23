@@ -1,0 +1,84 @@
+.page3 {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: top;
+  background: linear-gradient(
+    to top left,
+    black,
+    #282b2f,
+    black,
+    black,
+    black,
+    rgb(0, 0, 0),
+    black,
+    #282b2f,
+    black,
+    black,
+    black
+  );
+  perspective: 1000px;
+}
+
+.mission {
+  height: 85%;
+  background-color: black;
+  border-radius: 8vw;
+  color: white;
+  padding: 3.8vmax;
+  margin: 6vw;
+  margin-top: 10vh;
+}
+
+.mission h1 {
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  background-image: radial-gradient(circle at 40%, #fdf33f, #ffba19 50%, #ff8b39 90%, #ff7a63);
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-size: 5vmax;
+  margin-bottom: 3vw;
+  position: relative;
+  display: inline-block;
+  animation: shine 3s linear infinite;
+}
+
+.mission p {
+  margin-top: 3.7vh;
+  font-family: 'Lato', sans-serif;
+  font-weight: 350;
+  font-size: 1.6vmax;
+  font-style: normal;
+  letter-spacing: 0.09vh;
+}
+
+@media (max-width: 912px) {
+  .mission p {
+    font-size: 2vh;
+    margin-top: 2vh;
+  }
+  .mission h1 {
+    margin-bottom: 1vh;
+  }
+}
+
+@media (max-width: 500px) {
+  .mission p {
+    font-size: 1.75vh;
+    margin-top: 1.95vh;
+  }
+  .mission h1 {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 300px) {
+  .mission p {
+    font-size: 1.66vh;
+    margin-top: 1.5vh;
+  }
+  .mission h1 {
+    margin-bottom: 1.5vh;
+  }
+}

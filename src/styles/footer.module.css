@@ -1,0 +1,14 @@
+footer{
+    height:15vh;
+}
+  
+.social_media_links img{
+    height:8vh;
+  }
+.social_media_links {
+    width:100vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center; 
+}
+  

@@ -1,9 +1,10 @@
-import React from "react";
+import React from 'react'
+import DownloadStyle from '../styles/download.module.css'
 
 function DownloadSection() {
   return (
-    <div className='page7'>
-      <div className="download-btn">
+    <div className={DownloadStyle.page7}>
+      <div className={DownloadStyle.download_btn}>
         <button>
           <span>Download</span>
           <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -13,7 +14,7 @@ function DownloadSection() {
       </div>
       <div id="confetti-container"></div>
     </div>
-  );
+  )
 }
 
-export default DownloadSection;
+export default DownloadSection
