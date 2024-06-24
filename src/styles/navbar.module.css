@@ -1,7 +1,7 @@
 .navbar {
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 1100;
 }
 
 .navbar_content {
@@ -10,7 +10,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-right: 2vw;
+  padding-right:2vw;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px); 
+  -webkit-backdrop-filter: blur(10px); 
 }
 
 .nav_part {
