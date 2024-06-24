@@ -1,11 +1,25 @@
-import React, { useState } from 'react'
+import React, { useState , useEffect} from 'react'
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 import NavbarStyle from '../styles/navbar.module.css'
 import FeatureStyle from '../styles/features.module.css'
 
+
 function Nav() {
   const [isNavOpen, setIsNavOpen] = useState(false)
+
+  useEffect(() => {
+    if (isNavOpen) {
+      document.body.classList.add('no-scroll');
+    } else {
+      document.body.classList.remove('no-scroll');
+    }
+
+    // Cleanup function to remove the class when component unmounts
+    return () => {
+      document.body.classList.remove('no-scroll');
+    };
+  }, [isNavOpen]);
 
   const toggleNav = () => {
     setIsNavOpen(!isNavOpen)
