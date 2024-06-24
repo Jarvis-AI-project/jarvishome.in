@@ -2,7 +2,7 @@ import React from 'react'
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 import MissionStyle from '../styles/mission.module.css'
-import HeroStyle from "../styles/hero.module.css";
+import HeroStyle from '../styles/hero.module.css'
 
 function MissionSection() {
   gsap.registerPlugin(ScrollTrigger)

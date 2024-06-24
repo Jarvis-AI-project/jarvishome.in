@@ -1,7 +1,7 @@
 import React from 'react'
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
-import HeroStyle from "../styles/hero.module.css";
+import HeroStyle from '../styles/hero.module.css'
 
 function HeroSection() {
   gsap.registerPlugin(ScrollTrigger)

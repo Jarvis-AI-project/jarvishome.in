@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
-import NavbarStyle from "../styles/navbar.module.css";
+import NavbarStyle from '../styles/navbar.module.css'
 import FeatureStyle from '../styles/features.module.css'
 
 function Nav() {
@@ -14,11 +14,20 @@ function Nav() {
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
     if (section) {
+      // Scroll to the section
       section.scrollIntoView({ behavior: 'smooth' });
+  
+      // Wait for the scroll to finish, then refresh ScrollTrigger
+      setTimeout(() => {
+        ScrollTrigger.refresh();
+      }, 1000); 
     }
     setIsNavOpen(false);
+    setClickedItem(sectionId);
+    setTimeout(() => setClickedItem(null), 300);
   }
-
+  
+  gsap.registerPlugin(ScrollTrigger)
   useGSAP(() => {
     const t = gsap.timeline()
     t.from(`.${NavbarStyle.logo} img, .${NavbarStyle.logo} h1, .${NavbarStyle.nav_part} h2`, {
@@ -52,7 +61,10 @@ function Nav() {
           <h2 onClick={() => scrollToSection('download')}>Connect</h2>
           <button className={NavbarStyle.signin_button}>Sign In</button>
         </div>
-        <div className={`${NavbarStyle.hamburger} ${isNavOpen ? NavbarStyle.active : ''}`} onClick={toggleNav}>
+        <div
+          className={`${NavbarStyle.hamburger} ${isNavOpen ? NavbarStyle.active : ''}`}
+          onClick={toggleNav}
+        >
           <span className={NavbarStyle.bar}></span>
           <span className={NavbarStyle.bar}></span>
           <span className={NavbarStyle.bar}></span>
