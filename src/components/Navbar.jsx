@@ -20,12 +20,19 @@ function Nav() {
       // Wait for the scroll to finish, then refresh ScrollTrigger
       setTimeout(() => {
         ScrollTrigger.refresh();
-      }, 1000); 
+      }, 1000);
+  
+      gsap.from(section, {
+        duration: 3.5, 
+        opacity: 0,
+        y: 20,
+        ease: "slow(0.1,1,true)",
+      });
     }
     setIsNavOpen(false);
     setClickedItem(sectionId);
     setTimeout(() => setClickedItem(null), 300);
-  }
+  };
   
   gsap.registerPlugin(ScrollTrigger)
   useGSAP(() => {
