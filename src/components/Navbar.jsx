@@ -11,6 +11,14 @@ function Nav() {
     setIsNavOpen(!isNavOpen)
   }
 
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+    setIsNavOpen(false);
+  }
+
   useGSAP(() => {
     const t = gsap.timeline()
     t.from(`.${NavbarStyle.logo} img, .${NavbarStyle.logo} h1, .${NavbarStyle.nav_part} h2`, {
@@ -38,10 +46,10 @@ function Nav() {
           <h1>JARVIS</h1>
         </div>
         <div className={`${NavbarStyle.nav_part} ${isNavOpen ? NavbarStyle.active : ''}`}>
-          <h2>Mission</h2>
-          <h2>Features</h2>
-          <h2>Download</h2>
-          <h2>Connect</h2>
+          <h2 onClick={() => scrollToSection('mission')}>Mission</h2>
+          <h2 onClick={() => scrollToSection('features')}>Features</h2>
+          <h2 onClick={() => scrollToSection('download')}>Download</h2>
+          <h2 onClick={() => scrollToSection('download')}>Connect</h2>
           <button className={NavbarStyle.signin_button}>Sign In</button>
         </div>
         <div className={`${NavbarStyle.hamburger} ${isNavOpen ? NavbarStyle.active : ''}`} onClick={toggleNav}>
