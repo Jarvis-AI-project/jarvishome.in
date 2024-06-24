@@ -46,7 +46,28 @@
   font-size: 1.4vw;
   font-style: normal;
   transition: color 0.1s ease;
+  cursor: pointer;
 }
+.nav_part h2::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #ffd310;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.nav_part h2:hover {
+  color: #ffd310;
+}
+
+.nav_part h2:hover::after {
+  transform: scaleX(1);
+}
+
 .hamburger {
   display: none;
   cursor: pointer;
