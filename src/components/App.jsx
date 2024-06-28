@@ -2,19 +2,20 @@
 import React from 'react'
 import RevealText from './RevealText'
 import Navbar from './Navbar'
-import gsap from 'gsap'
-import { useGSAP } from '@gsap/react'
+import { gsap } from 'gsap';
 import HeroSection from './HeroSection'
 import MissionSection from './MissionSection'
 import FeaturesSection from './FeaturesSection'
 import DownloadSection from './DownloadSection'
 import Footer from './Footer'
 import AnimationStyle from '../styles/animation.module.css'
+import { useGSAP } from '@gsap/react'
+import { SparklesCore } from "./ui/sparkles";
 
 const App = () => {
   gsap.registerPlugin(ScrollTrigger)
   useGSAP(() => {
-
+    
     // gsap.to(".body", {
     //   background: "radial-gradient(circle at 40%, #fdf33f, #ffba19 50%, #ff8b39 90%, #ff7a63)",
     //   scrollTrigger: {
