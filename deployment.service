@@ -1,5 +1,5 @@
 [Unit]
-Description=My React App
+Description=jarvishome.in
 After=network.target
 
 [Service]
@@ -9,6 +9,8 @@ Restart=always
 User=devasheesh
 Group=devasheesh
 Environment="NODE_ENV=production"
+Restart=on-failure
+RestartSec=5s
 
 [Install]
 WantedBy=multi-user.target
