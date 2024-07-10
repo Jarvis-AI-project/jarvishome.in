@@ -1,4 +1,5 @@
 // src/App.jsx
+"use client";
 import React from 'react'
 import RevealText from './RevealText'
 import Navbar from './Navbar'
@@ -10,7 +11,7 @@ import DownloadSection from './DownloadSection'
 import Footer from './Footer'
 import AnimationStyle from '../styles/animation.module.css'
 import { useGSAP } from '@gsap/react'
-import { SparklesCore } from "./ui/sparkles";
+import SpotLightSection from "./SpotlightSection"
 
 const App = () => {
   gsap.registerPlugin(ScrollTrigger)
@@ -120,9 +121,10 @@ const App = () => {
   return (
     <div>
       <Navbar />
-      <div className="page1">
+      <SpotLightSection/>
+      {/* <div className="page1">
         <RevealText text="JARVIS" />
-      </div>
+      </div> */}
       <HeroSection />
       <div id="mission">
         <MissionSection />

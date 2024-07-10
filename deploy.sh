@@ -7,4 +7,4 @@ set -e
 npm run build
 
 # Serve the built React app using 'serve'
-serve -s build
+serve -s dist

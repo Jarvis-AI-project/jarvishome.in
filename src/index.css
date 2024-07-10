@@ -25,10 +25,9 @@ body {
   height: 70vh;
 }
 
-.page1 {
-  height: 100vh;
+.spotlight_section {
+  height: calc(100vh - 5vmax);
   width: 100vw;
-  margin-top: 10vh;
 }
 
 .no-scroll {
