@@ -1,11 +1,11 @@
 SHELL := /bin/bash
-SERVICE_NAME = jarvis-web-app
-SERVICE_FILE = $(CURDIR)/react-app.service
+SERVICE_NAME = jarvishome.in
+SERVICE_FILE = $(CURDIR)/deployment.service
 TARGET_SERVICE_FILE = /etc/systemd/system/$(SERVICE_NAME).service
 WORK_DIR = /home/devasheesh/auth-server
 VENV_DIR = $(WORK_DIR)/.venv
 
-include .env
+# xinclude .env
 .PHONY: all install enable start status logs stop disable clean deps deploy dev format
 
 
